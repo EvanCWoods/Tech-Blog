@@ -42,7 +42,7 @@ router.get("/:id", (req, res) => {
   })
     .then((user) => {
       if (!user) {
-        res.status(404).json({ message: "No user with this id" });
+        res.status(400).json({ message: "No user with this id" });
         return;
       }
       res.json(user);
@@ -111,7 +111,7 @@ router.post("/logout", (req, res) => {
       res.status(204).end();
     });
   } else {
-    res.status(404).end();
+    res.status(400).end();
   }
 });
 
@@ -124,7 +124,7 @@ router.put("/:id", (req, res) => {
   })
     .then((user) => {
       if (!user[0]) {
-        res.status(404).json({ message: "No user with this id" });
+        res.status(400).json({ message: "No user with this id" });
         return;
       }
       res.json(user);
@@ -143,7 +143,7 @@ router.delete("/:id", (req, res) => {
   })
     .then((user) => {
       if (!user) {
-        res.status(404).json({ message: "No user with this id" });
+        res.status(400).json({ message: "No user with this id" });
         return;
       }
       res.json(user);
