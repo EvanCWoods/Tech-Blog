@@ -1,24 +1,27 @@
-const editFormHandler = async function (event) {
+async function newFormHandler(event) {
   event.preventDefault();
 
-  const titleEl = document.getElementById("post-title");
-  const bodyEl = document.getElementById("post-body");
-  const postId = document.getElementById("post-id");
+  const title = document.querySelector('input[name="post-title"]').value;
+  const content = document.querySelector('input[name="content"]').value;
 
-  fetch("/api/post/" + postId.value, {
-    method: "put",
+  const response = await fetch(`/api/posts`, {
+    method: "POST",
     body: JSON.stringify({
-      title: titleEl.value,
-      body: bodyEl.value,
+      title,
+      content,
     }),
-    headers: { "Content-Type": "application/json" },
-  })
-    .then(function () {
-      document.location.replace("/dashboard");
-    })
-    .catch((err) => console.log(err));
-};
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (response.ok) {
+    document.location.replace("/dashboard");
+  } else {
+    alert(response.statusText);
+  }
+}
 
 document
-  .querySelector("#edit-post-form")
-  .addEventListener("submit", editFormHandler);
+  .querySelector("#new-post-form")
+  .addEventListener("submit", newFormHandler);
