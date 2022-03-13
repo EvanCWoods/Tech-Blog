@@ -19,14 +19,9 @@ https://opensource.org/licenses/MIT
 
 
 ## Description
-This project is an E-Commerce backend built in node js using sequelize as a database and express router to build the API that returns the data to the user in JSON form. The application allows users to interact with a hypothetical stores inventory system including categories which products belong to, the products themselves, including the name, price, stock and which category it belongs to. Finally, the app allows users to interact with the tags associated with the products. The features that users have access to are as follows:
+This project is a tech blog that allows users to create an account, add posts, edit posts and delete posts while logged in, and view the feed of everyones posts without being logged in. The app is very straight forward and easy to navigate.  
 
-* Getting the list of categories, products or tags,
-* Getting a specific category, product or tag,
-* Changing information in a specific category, product or tag,
-* deleting a specific category, product or tag
-
-This fulfils all of the technical acceptance criteria.
+The project fulfils all of the technical acceptance criteria listed in the user story below.
 
 
 
@@ -84,6 +79,9 @@ To Install and run this application yourself, follow the step(s) below:
 
 ## Usage
 Open the app at the following URL and use it as you please.
+https://evan-woods-tech-blog.herokuapp.com 
+
+Alternatively, you can run the program locally by cloning this repository, adding your credentials to the .env.EXAMPLE file, and initializing the database in the terminal.
 
 
 ## Contribute
