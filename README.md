@@ -23,7 +23,7 @@ This project is a tech blog that allows users to create an account, add posts, e
 
 The project fulfils all of the technical acceptance criteria listed in the user story below.
 
-
+The code used to build this project was adapted from instructor examples and refactored to fit this particular problem.
 
 ## User Story
 
